@@ -16,6 +16,10 @@ services:
     image: grafana/promtail:2.0.0
     volumes:
       - "/var/log:/var/log"
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
 volumes:
   loki:
   grafana:
